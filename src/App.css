@@ -1,5 +1,155 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+li input[type="checkbox"] {
+  margin-right: 15px;
+  transform: scale(1.5);
+  flex-shrink: 0;
+}
+
+li span {
+  flex-grow: 1;
+  
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  border-radius: 50%;
+  background-color: #ff4136;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background-color: #ff7066;
+}
+
+.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  background-color: #ffdc00;
+}
+
+.edit-btn:hover {
+  background-color: #ffeb66;
+}
+
+.save-btn {
+  background-color: #2ecc40;
+}
+
+.save-btn:hover {
+  background-color: #5edc5e;
+}
+
+.cancel-btn {
+  background-color: #ff851b;
+}
+
+.cancel-btn:hover {
+  background-color: #ffa54d;
+}
+
+.edit-input {
+  flex-grow: 1;
+  font-size: 18px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* Tooltip styles for all buttons */
+.edit-btn:hover::after,
+.delete-btn:hover::after,
+.save-btn:hover::after,
+.cancel-btn:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.edit-btn:hover::after,
+.delete-btn:hover::after,
+.save-btn:hover::after,
+.cancel-btn:hover::after {
+  opacity: 1;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 .App-logo {
